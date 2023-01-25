@@ -1,0 +1,37 @@
+.section-serch-form{
+ @include size(30%,90%,0);
+ min-width: 320px;
+ margin: auto 0;
+ @include flex(column,space-evenly,center);
+
+ input{
+  @include size(80%,30px,2px);
+  background-color: color("blueGreen");
+  border: none;
+  text-align: center;
+  @include font(1.8rem,500,auto,color("while"));
+  &::placeholder{
+   color :color("blue");
+  }
+ }
+ button{
+  @include size(20%,40px,3px);
+  @include flex(row,end,center);
+  min-width: 150px;
+  background-color: color("blue");
+  
+  p{
+   @include font(1.8rem,500,2rem,color("while"));
+   margin-left:auto;
+  }
+  img{
+   @include size(20px,20px,0);
+   margin: {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right:5px ;
+   };
+  }
+ }
+}

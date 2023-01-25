@@ -1,0 +1,32 @@
+.section-academias{
+ width: 100%;
+ height: auto;
+ display: grid;
+ grid-template-rows: 1fr 1.5fr 1.5fr;
+ 
+ @include media-down("md"){
+  grid-template-rows: 560px 2fr 2fr;
+ }
+ @include media-down("sm"){
+  height: 89vh;
+  grid-template-rows: 50% 50%;
+ }
+
+ .section-data{
+  padding:0 10px;
+  padding-bottom: 20px;
+  background-color:color("blue");
+
+ }
+ .section-serch{
+  background: {
+   color: color("black");
+   image : url("../../images/mapa-azul.png");
+   position: center;
+   repeat:no-repeat;
+   size: contain;
+  }
+  display: flex;
+  justify-content: center; 
+ }
+}

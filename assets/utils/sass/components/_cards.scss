@@ -1,0 +1,83 @@
+.section-list-services figure{
+
+ &:hover {
+
+  & img{
+   filter: blur(15px);
+   transition: 0.2s;
+  }
+  & ul{
+  visibility: visible;
+  transition: 0.5s;
+  }
+ }
+ @include size(100%,100%,0);
+ margin: 0;
+ position: relative;
+ ul{
+  visibility: hidden;
+  position: absolute;
+  @include size(100%,100%,0);
+  @include flex(column,space-evenly,center);
+  @include media-down("md"){
+   visibility: visible;
+  }
+  top: 0;
+  z-index: 3;
+  li h4{
+   @include font(2.5rem,bold,3rem,color("orange"));
+   letter-spacing: 3px;
+   transition: 0.2s;
+   @include media-down("sm"){
+    @include font(3.5rem,bold,3rem,color("orange"));
+   }
+
+  }
+  li a{
+   @include font(1.6rem,bold,2.5rem,color("while"));
+   transition: 0.2s;
+   @include media-down("sm"){
+    @include font(2em,bold,2.5rem,color("while"));
+   }
+   &:hover{
+    @include font(1.8rem,bold,2.5rem,color("yellow"));
+    @include media-down("sm"){
+     font-size: 1.8
+    }
+   }
+  }
+ }
+ img{
+  @include size(100%,100%,0);
+  object-fit: contain;
+  z-index: 1;
+  transition: 0.2s;
+  @include media-down("md"){
+   filter: brightness(50%);
+  }
+ }
+}
+
+.section-images{
+ @include size(100%,100%,0);
+ background-color: color("black");
+ display: grid;
+ place-content: center;
+ place-items: center;
+ grid-template-columns: repeat(6,1fr);
+ grid-template-rows: 1fr;
+
+ @include media-down("md"){
+  grid-template-columns: repeat(3,minmax(150px,250px));
+  grid-template-rows: 1fr 1fr;
+ }
+ @include media-down("sm"){
+  display: none
+ }
+  img{
+  @include size(100%,100%,0);
+  background-position: center;
+  object-fit: contain;
+  transition: 0.2s;
+ }
+}

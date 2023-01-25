@@ -1,0 +1,19 @@
+{
+  "name": "remain-pro",
+  "version": "1.0.0",
+  "description": "estilos de remain pro",
+  "main": "index.js",
+  "scripts": {
+    "sass" :"sass --watch ./assets/utils/sass/index.scss ./assets/utils/css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisGomezOjeda/remain-pro.git"
+  },
+  "author": "luis gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisGomezOjeda/remain-pro/issues"
+  },
+  "homepage": "https://github.com/luisGomezOjeda/remain-pro#readme"
+}

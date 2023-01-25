@@ -1,0 +1,11 @@
+@function color($keycolor){
+ @return map-get($map: $palette,$key:$keycolor);
+}
+@function fontSize($size){
+ @return map-get($map: $font,$key:$size);
+}
+
+
+@function breakPoint($size){
+ @return map-get($map: $breakPoint,$key:$size);
+}

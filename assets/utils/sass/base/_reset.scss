@@ -1,0 +1,15 @@
+body{
+ @include size(100%,auto,0);
+ border: 0;
+ padding:0;
+ margin: 0;
+ height: auto;
+}
+
+button{
+ background: none;
+  border: none;
+}
+ul{
+ padding: 0;
+}
