@@ -26,27 +26,24 @@
      z-index: 50;
       overflow-y: hidden;
       left: 100%;
-      bottom: 0;
+      bottom:0;
       margin-bottom: 0;
-      @include size(100%,83.7%,0);
+      @include size(100%,85.9%,0);
       padding:20px 0;
       margin-right: 20px;
-      background:#2c3e50;
+      background:color("fur");
       transition:0.2s all;
       overflow-y:auto;
 
       .nav-menu-item{
-        font-size :1.8rem;
-        margin: 0 10px;
-        line-height:80px;
         width: max-content;
        }
     }
     .nav-menu-link{
-      @include font(2rem,500,3rem,color("while"));
+      @include font(2rem,500,3rem,color("black"));
       letter-spacing: 3px;
       @include media-down("xl"){
-        @include font(2.6rem,500,3rem,color("while"));
+        @include font(2.6rem,500,3rem,color("black"));
       }
     }
   }
@@ -72,7 +69,7 @@
   position:relative;
   
   &:hover{
-   background-color: color("blue");
+   background-color: color("furWhile");
    transition:0.2s;
    transform:rotate(0);
   }

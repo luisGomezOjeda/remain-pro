@@ -1,0 +1,19 @@
+.section-registrar{
+ @include size(100%,auto,0);
+ margin-top: 100px;
+ @include flex(row,center,center);
+ .section-registrar--form{
+  @include size(60%,auto,0);
+  & .form-grid{
+    @include size(100%,100%,0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(19,50px);
+    grid-gap: 55px;
+    input{
+     @include size(100%,100%,0);
+     text-align: center;
+    }
+  }
+ }
+}

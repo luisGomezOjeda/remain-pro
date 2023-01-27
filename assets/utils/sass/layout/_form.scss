@@ -1,24 +1,24 @@
 .section-serch-form{
- @include size(30%,90%,0);
+ @include size(40%,90%,0);
  min-width: 320px;
  margin: auto 0;
  @include flex(column,space-evenly,center);
 
  input{
   @include size(80%,30px,2px);
-  background-color: color("blueGreen");
+  background-color: color("fur");
   border: none;
   text-align: center;
-  @include font(1.8rem,500,auto,color("while"));
+  @include font(1.8rem,500,auto,color("black"));
   &::placeholder{
-   color :color("blue");
+   color :color("black");
   }
  }
  button{
   @include size(20%,40px,3px);
   @include flex(row,end,center);
   min-width: 150px;
-  background-color: color("blue");
+  background-color: color("furBlack");
   
   p{
    @include font(1.8rem,500,2rem,color("while"));

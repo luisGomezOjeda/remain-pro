@@ -1,5 +1,86 @@
-@include article(".section-presentation-article","blue",2rem,"black",100px,start,80%);
-
-@include article(".section-data-article","yellow",2.5rem,"while",0,center,60%);
-
-
+.article-info{
+ @include flex(column,start,center);
+  .title{
+    position: relative;
+   @include size(100%,20%,100%);
+   margin-top: 30px;
+   @include media-down("sm"){
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; 
+    place-items: center;
+    }
+   img{
+     @include size(9%,150%,100%);
+     min-width: 150px;
+     max-height: 150px;
+     position:absolute;
+     top: -28px;
+    object-fit: contain;
+    padding:15px;
+    background-color: color("fur");
+    z-index: 2;
+    @include media-down("xl"){
+     }
+     @include media-down("sm"){
+       visibility: hidden;
+      height: 0;
+    }
+   }
+   h3{
+     position: relative;
+     @include font(3.5rem,bold,4rem,color("black"));
+     @include size(100%,30%,0);
+     text-align: center;
+     background-color: color("fur");
+     margin-bottom: 15px solid color("fur");
+     @include media-down("xl"){
+       text-align: center;
+     }
+     @include media-down("sm"){
+       text-align: center;
+       @include font(3.5rem,bold,4rem,color("black"));
+     }
+     
+     &::after{
+      content: "";
+      position: absolute;
+      left:-8px;
+      background-color: color("fur");
+      height: 100%;
+      width: 10px;
+      @include media-down("sm"){
+       display: none;
+      }
+     }
+     &::before{
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      background-color: color("fur");
+      height: 10px;
+      width: 100%;
+       left: 0;
+     }
+   }
+  }
+  h4{
+   @include font(5rem,bold,4rem,color("black"));
+  }
+  p{
+    @include font(2.5rem,500,3.5rem,color("black"));
+    padding: 20px 150px;
+    @include media-down("xl"){
+      padding: 0 10px;
+      padding-top:40px; 
+    }
+    @include media-down("md"){
+      @include font(1.8rem,500,2.5rem,color("black"));
+      text-align: center;
+    }
+    @include media-down("sm"){
+      @include font(1.6rem,500,2.5rem,color("black"));
+      padding-top:0; 
+   }
+  }
+}

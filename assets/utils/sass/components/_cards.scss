@@ -1,83 +1,77 @@
 .section-list-services figure{
-
- &:hover {
-
-  & img{
-   filter: blur(15px);
-   transition: 0.2s;
-  }
-  & ul{
-  visibility: visible;
-  transition: 0.5s;
-  }
- }
  @include size(100%,100%,0);
  margin: 0;
  position: relative;
- ul{
-  visibility: hidden;
-  position: absolute;
-  @include size(100%,100%,0);
-  @include flex(column,space-evenly,center);
-  @include media-down("md"){
-   visibility: visible;
-  }
-  top: 0;
-  z-index: 3;
-  li h4{
-   @include font(2.5rem,bold,3rem,color("orange"));
-   letter-spacing: 3px;
-   transition: 0.2s;
-   @include media-down("sm"){
-    @include font(3.5rem,bold,3rem,color("orange"));
-   }
 
+ 
+ ul{
+   position: absolute;
+  @include size(100%,15%,0);
+  @include flex(column,end,center);
+  bottom: 0;
+  transition: 0.2s;
+  z-index: 3;
+
+  &:hover {
+    @include size(100%,95%,0);
+    .links-service{
+    visibility: visible;
   }
-  li a{
-   @include font(1.6rem,bold,2.5rem,color("while"));
-   transition: 0.2s;
-   @include media-down("sm"){
-    @include font(2em,bold,2.5rem,color("while"));
-   }
-   &:hover{
-    @include font(1.8rem,bold,2.5rem,color("yellow"));
-    @include media-down("sm"){
-     font-size: 1.8
+ }
+  & h4{
+    background-color: color("fur");
+    @include size(95%,4rem,0);
+    @include font(2rem,bold,4rem,color("black"));
+    text-align: center;
+    margin: 0;
+  }
+  .links-service{
+    visibility: hidden;
+    @include size(95%,95%,0);
+    background-color: color("fur");
+    text-align: center;
+    padding-top: 15px;
+    a{
+    @include font(1.8rem,500,2.5rem,color("black"));
+    letter-spacing: 1px;
     }
-   }
   }
  }
  img{
   @include size(100%,100%,0);
-  object-fit: contain;
+  object-fit: cover;
+  object-position: 0 0%;
+  margin: 0 auto;
   z-index: 1;
   transition: 0.2s;
-  @include media-down("md"){
-   filter: brightness(50%);
+  @include media-down("sm"){
+    object-position: 0 40%;
   }
  }
 }
 
 .section-images{
  @include size(100%,100%,0);
- background-color: color("black");
  display: grid;
- place-content: center;
+ place-content: start center;
  place-items: center;
  grid-template-columns: repeat(6,1fr);
- grid-template-rows: 1fr;
+ grid-template-rows:317px;
 
  @include media-down("md"){
   grid-template-columns: repeat(3,minmax(150px,250px));
   grid-template-rows: 1fr 1fr;
  }
  @include media-down("sm"){
-  display: none
+  display: none 
  }
   img{
   @include size(100%,100%,0);
-  background-position: center;
-  object-fit: contain;
+  background-position: 0 0%;
+  object-fit: cover;
   transition: 0.2s;
+  @include media-down("xl"){
+    // object-fit: contain;
+  }
  }
 }
