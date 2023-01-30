@@ -4,6 +4,7 @@
  margin: auto 0;
  @include flex(column,space-evenly,center);
 
+
  input{
   @include size(80%,30px,2px);
   background-color: color("fur");
@@ -33,5 +34,15 @@
     right:5px ;
    };
   }
+ }
+}
+
+.grid-item{
+ @include flex(column,center,center);
+ @include size(100%,90px,0);
+
+ label{
+  text-align: center;
+  @include font(1.8rem,500,2.5rem,color("black"));
  }
 }

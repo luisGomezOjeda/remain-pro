@@ -33,9 +33,9 @@ main {
 header {
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
-  height: 90px;
+  height: 100px;
   border-radius: 0;
   background: #9b7f6c;
   display: flex;
@@ -225,6 +225,23 @@ header {
   margin-right: 5px;
 }
 
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  border-radius: 0;
+}
+.grid-item label {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: #000000;
+}
+
 .section-list-services {
   width: 100%;
   height: auto;
@@ -232,9 +249,20 @@ header {
   display: grid;
   place-content: center;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, 317px);
-  grid-auto-flow: row;
-  grid-auto-rows: 317px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: 340px;
+}
+@media (max-width: 1800px) {
+  .section-list-services {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .section-list-services {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 1fr;
+  }
 }
 @media (max-width: 540px) {
   .section-list-services {
@@ -324,11 +352,11 @@ header {
     grid-template-rows: repeat(20, 50px);
   }
 }
-.section-registrar .section-registrar--form .form-grid input:nth-child(19), .section-registrar .section-registrar--form .form-grid input:nth-child(20) {
+.section-registrar .section-registrar--form .form-grid .grid-item:nth-child(19), .section-registrar .section-registrar--form .form-grid input:nth-child(20) {
   grid-column: 1/3;
 }
 @media (max-width: 1045px) {
-  .section-registrar .section-registrar--form .form-grid input:nth-child(19), .section-registrar .section-registrar--form .form-grid input:nth-child(20) {
+  .section-registrar .section-registrar--form .form-grid .grid-item:nth-child(19), .section-registrar .section-registrar--form .form-grid input:nth-child(20) {
     grid-column: 1/2;
   }
 }
@@ -346,20 +374,20 @@ header {
 }
 .section-list-services figure ul {
   position: absolute;
+  bottom: -280px;
   width: 100%;
-  height: 15%;
+  height: 0;
   border-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  bottom: 0;
   transition: 0.2s;
   z-index: 3;
 }
 .section-list-services figure ul:hover {
   width: 100%;
-  height: 95%;
+  height: auto;
   border-radius: 0;
 }
 .section-list-services figure ul:hover .links-service {
@@ -370,7 +398,7 @@ header {
   width: 95%;
   height: 4rem;
   border-radius: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   line-height: 4rem;
   color: #000000;
@@ -380,18 +408,17 @@ header {
 .section-list-services figure ul .links-service {
   visibility: hidden;
   width: 95%;
-  height: 95%;
+  height: auto;
   border-radius: 0;
   background-color: #c5a691;
   text-align: center;
-  padding-top: 15px;
+  padding: 15px 0;
 }
 .section-list-services figure ul .links-service a {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   line-height: 2.5rem;
   color: #000000;
-  letter-spacing: 1px;
 }
 .section-list-services figure img {
   width: 100%;
@@ -440,7 +467,7 @@ header {
 }
 .section-registrar--form input {
   width: 100%;
-  height: 100%;
+  height: 40px;
   border-radius: 0;
   min-width: 250px;
   text-align: center;
@@ -514,17 +541,15 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    height: 89%;
+    border-radius: 0;
+    margin: 0;
     position: fixed;
     z-index: 50;
     overflow-y: hidden;
     left: 100%;
     bottom: 0;
-    margin-bottom: 0;
-    width: 100%;
-    height: 85.9%;
-    border-radius: 0;
-    padding: 20px 0;
-    margin-right: 20px;
     background: #c5a691;
     transition: 0.2s all;
     overflow-y: auto;

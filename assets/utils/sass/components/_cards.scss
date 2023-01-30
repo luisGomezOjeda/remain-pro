@@ -6,34 +6,34 @@
  
  ul{
    position: absolute;
-  @include size(100%,15%,0);
-  @include flex(column,end,center);
-  bottom: 0;
-  transition: 0.2s;
-  z-index: 3;
+   bottom: -280px;
+   @include size(100%,0,0);
+   @include flex(column,end,center);
+   transition: 0.2s;
+   z-index: 3;
 
-  &:hover {
-    @include size(100%,95%,0);
+
+  &:hover{
+    @include size(100%,auto,0);
     .links-service{
     visibility: visible;
   }
- }
-  & h4{
-    background-color: color("fur");
+}
+& h4{
+  background-color: color("fur");
     @include size(95%,4rem,0);
-    @include font(2rem,bold,4rem,color("black"));
+    @include font(1.8rem,bold,4rem,color("black"));
     text-align: center;
     margin: 0;
   }
   .links-service{
     visibility: hidden;
-    @include size(95%,95%,0);
+    @include size(95%,auto,0);
     background-color: color("fur");
     text-align: center;
-    padding-top: 15px;
+    padding: 15px 0;
     a{
-    @include font(1.8rem,500,2.5rem,color("black"));
-    letter-spacing: 1px;
+    @include font(1.9rem,500,2.5rem,color("black"));
     }
   }
  }
