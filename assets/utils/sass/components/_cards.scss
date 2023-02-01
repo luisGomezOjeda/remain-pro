@@ -77,12 +77,15 @@
 }
 
 .card-plan{
-  @include size(320px,250px,0);
+  @include size(250px,250px,0);
   min-width: 320px;
   margin: 0 80px;
   margin-top: 10%;
   scroll-snap-align: center;
   position: relative;
+  @include media-down("md"){
+    margin-top: 20%;
+  }
   h4{
     @include font(2.5rem,bold,8rem,color("fur"));
     width: 100%;
@@ -92,11 +95,11 @@
     background: color("black");
     position: absolute;
     top: -85px;
-    left: 20px;
+    left: 4px;
   }
   ul{
     background-color:color("furWhile");
-    @include size(100%,200px,0);
+    @include size(90%,200px,0);
     @include flex(column,space-evenly,start);
     margin: 0 auto;
     padding: 0 20px;
