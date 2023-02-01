@@ -315,7 +315,7 @@ main {
   width: 100%;
   height: auto;
   border-radius: 0;
-  padding: 80px 0;
+  padding-top: 80px;
 }
 .section-registrar .section-registrar--form {
   width: 90%;
@@ -353,7 +353,7 @@ main {
 
 .section-planes {
   display: flex;
-  height: 400px;
+  height: auto;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
