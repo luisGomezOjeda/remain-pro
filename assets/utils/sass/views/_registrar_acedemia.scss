@@ -1,0 +1,34 @@
+.section-registrar{  
+  @include size(100%,auto,0);
+  padding:80px 0;
+  .section-registrar--form{
+    @include size(90%,100%,0);
+    display: grid;
+    margin: 0 auto;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 40px;
+    @include media-down("xl"){
+      grid-template-columns: 1fr;
+      @include size(95%,auto,0);
+    }
+  }
+  & article,& .item:nth-child(19),& input[type="submit"] {
+    grid-column: 1/3;
+    @include media-down("xl"){
+      grid-column: 1/2;
+    }
+  }
+  .item{
+    @include flex(column,center,center);
+  }
+}
+
+.section-planes{
+  display: flex;
+  height: 400px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}

@@ -1,23 +1,29 @@
-.section-registrar--form input{
- @include size(100%,40px,0);
- min-width: 250px;
- text-align: center;
- border: none;
- background-color: color("furWhile");
- @include font(2rem,500,2.5rem,color("black"));
- @include media-down("sm"){
-  @include font(1.4rem,500,2.5rem,color("black"));
+.item{
+ @include size(100%,auto,0);
+  input{
+   @include size(100%,40px,0);
+   min-width: 250px;
+   text-align: center;
+   border: none;
+   background-color: color("furWhile");
+   @include media-down("sm"){
+    @include size(300px,40px,0);
+  }
  }
- 
- &:nth-child(20){
-  justify-self: center;
-  @include size(40%,100%,10px);
-  min-width: 200px;
-  margin-top: 30px;
-  @include font(2.5rem,bold,3.5rem,color("while"));
-  letter-spacing: 2px;
-  background: #9b7f6c;
-  box-shadow: inset 5px 5px 23px #715d4f,inset -5px -5px 23px #c5a189;
-
+ label{
+  @include font(2rem,500,2.5rem,color("black"));
+   @include media-down("sm"){
+   @include font(1.4rem,500,2.5rem,color("black"));
+  }
  }
 }
+#registrar_academia{
+ @include size(20%,60px,30px);
+ min-width: 200px;
+ border: none;
+ @include font(2.5rem,bold,3.5rem,color("while"));
+ letter-spacing: 2px;
+background: color("furBlack");
+box-shadow: inset 29px 29px 57px #e6cbba,
+            inset -29px -29px 57px #c5a691;
+} 

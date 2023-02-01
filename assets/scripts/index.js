@@ -23,7 +23,6 @@ document.addEventListener("click",e=>{
  if(e.target.matches(".main-secundary")){
   console.log("main");
   getHTML("./assets/html/inicio.html","main-content");
-  
   console.log(e.target.href);
   getHTML(e.target.href,"main-secundary");
 
