@@ -247,6 +247,63 @@ main {
   color: #000000;
 }
 
+.item-check {
+  grid-column: 1/3;
+}
+@media (max-width: 1045px) {
+  .item-check {
+    grid-column: 1/2;
+  }
+}
+.item-check p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #000000;
+  text-align: center;
+}
+@media (max-width: 540px) {
+  .item-check p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #000000;
+  }
+}
+.item-check ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.item-check ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+}
+.item-check ul li label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #000000;
+}
+.item-check ul li input {
+  width: 50px;
+  height: 2rem;
+  border-radius: 0;
+}
+
+.register-form-div {
+  width: 100%;
+  height: 250px;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+}
+
 .section-list-services {
   width: 100%;
   height: auto;
@@ -357,6 +414,31 @@ main {
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
+}
+
+.section-register {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+.section-register .section-register--form .register-form-grid {
+  width: 90%;
+  height: auto;
+  border-radius: 0;
+  display: grid;
+  margin: 0 auto;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+}
+@media (max-width: 1045px) {
+  .section-register .section-register--form .register-form-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .section-list-services figure {
@@ -512,6 +594,10 @@ main {
   width: 100%;
   height: auto;
   border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .item input {
   width: 100%;
@@ -520,6 +606,10 @@ main {
   min-width: 250px;
   text-align: center;
   border: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  color: #000000;
   background-color: #ecc8b1;
 }
 @media (max-width: 540px) {
@@ -534,6 +624,7 @@ main {
   font-weight: 500;
   line-height: 2.5rem;
   color: #000000;
+  text-align: center;
 }
 @media (max-width: 540px) {
   .item label {
@@ -543,8 +634,27 @@ main {
     color: #000000;
   }
 }
+.item select {
+  width: 100%;
+  height: 40px;
+  border-radius: 0;
+  min-width: 250px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  color: #000000;
+  border: 2px solid #c5a691;
+}
+@media (max-width: 540px) {
+  .item select {
+    width: 300px;
+    height: 40px;
+    border-radius: 0;
+  }
+}
 
-#registrar_academia {
+#registrar_academia, #registrarme {
   width: 20%;
   height: 60px;
   border-radius: 30px;

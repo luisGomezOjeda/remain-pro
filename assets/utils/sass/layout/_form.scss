@@ -40,9 +40,43 @@
 .grid-item{
  @include flex(column,center,center);
  @include size(100%,90px,0);
-
+ 
  label{
   text-align: center;
   @include font(1.8rem,500,2.5rem,color("black"));
  }
+}
+
+.item-check{
+ grid-column: 1/3;
+ @include media-down("xl"){
+  grid-column: 1/2;
+ }
+ p{
+  @include font(2rem,500,2rem,color("black"));
+  text-align: center;
+  @include media-down("sm"){
+   @include font(1.4rem,500,2rem,color("black"));
+  }
+ }
+ ul{
+  @include flex(row,space-evenly,baseline);
+  flex-wrap: wrap;
+  li{
+   @include flex(column,center,center);
+   margin: 0 3px;
+   label{
+    @include font(1.6rem,500,2rem,color("black"));
+   }
+   input{
+    @include size(50px,2rem,0);
+   }
+  }
+ }
+}
+
+.register-form-div{
+ @include size(100%,250px,0);
+ display: grid;
+ place-items: center;
 }

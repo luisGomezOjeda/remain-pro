@@ -1,10 +1,12 @@
 .item{
  @include size(100%,auto,0);
+ @include flex(column,space-evenly,center);
   input{
    @include size(100%,40px,0);
    min-width: 250px;
    text-align: center;
    border: none;
+   @include font(1.8rem,500,3.5rem,color("black"));
    background-color: color("furWhile");
    @include media-down("sm"){
     @include size(300px,40px,0);
@@ -12,12 +14,25 @@
  }
  label{
   @include font(2rem,500,2.5rem,color("black"));
+  text-align: center;
    @include media-down("sm"){
    @include font(1.4rem,500,2.5rem,color("black"));
   }
  }
+
+
+ select{
+  @include size(100%,40px,0);
+  min-width: 250px;
+  text-align: center;
+  @include font(1.8rem,500,3.5rem,color("black"));
+  border : 2px solid color("fur");
+  @include media-down("sm"){
+    @include size(300px,40px,0);
+  }
+ }
 }
-#registrar_academia{
+#registrar_academia,#registrarme{
  @include size(20%,60px,30px);
  min-width: 200px;
  border: none;
