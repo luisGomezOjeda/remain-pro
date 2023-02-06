@@ -26,9 +26,12 @@
 }
 
 .section-planes{
-  display: flex;
-  height: auto;
-  overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
+  width: 100%;
+  @include flex(row,center,center);
+  flex-wrap: wrap;
+  // display: flex;
+//   height: auto;
+//   overflow-x: scroll;
+//   overscroll-behavior-x: contain;
+//   scroll-snap-type: x proximity;
 }

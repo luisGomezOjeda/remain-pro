@@ -1,0 +1,43 @@
+.section-miPerfil{
+ @include size(100%,auto,0);
+ .main-perfil--data-user{
+  @include flex(row,space-between,center);
+  padding: 0 10%;
+  figure{
+   @include size(50%,auto,0);
+   background-color: red;
+   .image{
+    @include size(200px,200px,0);
+   }
+   .icon{
+    @include size(1.8rem,1.8rem,0);
+   }
+  }
+  .data-user,.data-user--academia{
+   @include flex(row,space-evenly,center);
+   @include font(1.8rem,500,1.8rem,color("black"));
+  }
+  .data-user--academia{
+   @include flex(row,space-between,center);
+   padding: 0 2%;
+  
+   div{
+    @include flex(column,space-evenly,center);
+   }
+   .editar{
+    align-self: flex-end;
+   }
+  }
+ }
+ .main-perfil--data-user{
+  @include size(100%,auto,0);
+  h4{
+   @include font(3rem,bold,3.5rem,color("black"));
+   ul{
+    @include size(100%,auto,0);
+    @include flex(row,space-between,center);
+
+   }
+  }
+ }
+}

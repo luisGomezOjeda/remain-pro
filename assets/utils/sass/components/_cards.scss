@@ -1,30 +1,50 @@
 .section-list-services figure{
- @include size(100%,100%,0);
+ @include size(12%,100%,0);
+ min-width: 150px;
  margin: 0;
  position: relative;
-
+ 
+ @include media(1207px){
+   min-width: 20%;
+  }
+  @include media-down("md"){
+    min-width: 33%;
+ }
+ @include media-down("sm"){
+   min-width: 50%;
+ }
  
  ul{
    position: absolute;
-   bottom: -280px;
+   bottom: -349px;
+   margin-top: 100%;
    @include size(100%,0,0);
    @include flex(column,end,center);
    transition: 0.2s;
    z-index: 3;
+   
+   @include media-down("sm"){
+     bottom: -310px;
+    }
+    
+    &:hover{
+      @include size(100%,auto,0);
+      .links-service{
+        visibility: visible;
+      }
+    }
 
-
-  &:hover{
-    @include size(100%,auto,0);
-    .links-service{
-    visibility: visible;
-  }
-}
-& h4{
+    
+    & h4{
   background-color: color("fur");
-    @include size(95%,4rem,0);
-    @include font(1.8rem,bold,4rem,color("black"));
+    @include size(100%,4rem,0);
+    @include font(1.6rem,bold,4rem,color("black"));
     text-align: center;
     margin: 0;
+    
+    @include media-down("sm"){
+      @include font(2rem,bold,4rem,color("black"));
+    }
   }
   .links-service{
     visibility: hidden;
@@ -34,9 +54,10 @@
     padding: 15px 0;
     a{
     @include font(1.9rem,500,2.5rem,color("black"));
-    }
+   }
   }
- }
+ }  
+
  img{
   @include size(100%,100%,0);
   object-fit: cover;
@@ -48,6 +69,18 @@
     object-position: 0 40%;
   }
  }
+}
+
+
+.section-list-services figure:nth-child(4){
+  ul h4{
+    @include font(1.4rem,bolder,1.4rem,color("black"));
+    padding: 6px 0;
+    @include media-down("sm"){
+      padding: 2px 0;
+      @include font(1.8rem,bolder,1.8rem,color("black"));
+    }
+  }
 }
 
 .section-images{
@@ -79,9 +112,7 @@
 .card-plan{
   @include size(250px,250px,0);
   min-width: 320px;
-  margin: 0 80px;
   margin-top: 10%;
-  scroll-snap-align: center;
   position: relative;
   @include media-down("md"){
     margin-top: 20%;
