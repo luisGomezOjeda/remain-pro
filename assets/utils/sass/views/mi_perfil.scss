@@ -1,13 +1,22 @@
 .section-miPerfil{
  @include size(100%,auto,0);
  .main-perfil--data-user{
-  @include flex(row,space-between,center);
-  padding: 0 10%;
-  figure{
-   @include size(50%,auto,0);
+  margin-top: 60px;
+  @include flex(row,center,center);
+  @include media-down("xl"){
+   @include flex(column,center,center);
+  }
+  figure.perfil--data{
+   @include size(40%,auto,0);
    background-color: red;
+   min-width: 450px;
+   
+   @include media-down("sm"){
+    min-width: 310px;
+    @include flex(column,center,center);
+    }
    .image{
-    @include size(200px,200px,0);
+    @include size(180px,180px,0);
    }
    .icon{
     @include size(1.8rem,1.8rem,0);
@@ -29,15 +38,36 @@
    }
   }
  }
- .main-perfil--data-user{
+ .main-perfil--data-alumno{
   @include size(100%,auto,0);
   h4{
    @include font(3rem,bold,3.5rem,color("black"));
-   ul{
-    @include size(100%,auto,0);
-    @include flex(row,space-between,center);
+   padding: 0 140px;
+   @include media-down("xl"){
+    text-align: center;
+   }
+   @include media-down("sm"){
+    @include font(2rem,bold,3.5rem,color("black"));
+    padding:0;
 
    }
   }
+   ul{
+    width: 100%;
+    max-height: 120px;
+    @include flex(row,center,center);
+    overflow-x: auto;
+    ul::-webkit-scrollbar{
+     width: 0;
+    }
+    li{
+     width: auto;
+     margin: 0 15px;
+     @include media-down("md"){
+      @include flex(row,space-between,center);
+       @include font(2rem,500,2.5rem,color("black"));
+     }
+    }
+   }
  }
 }

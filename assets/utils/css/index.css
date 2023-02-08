@@ -144,6 +144,14 @@ main {
   line-height: 4rem;
   color: #000000;
 }
+@media (max-width: 540px) {
+  .article-info h4 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 4rem;
+    color: #000000;
+  }
+}
 .article-info p {
   font-size: 2.5rem;
   font-weight: 500;
@@ -442,24 +450,42 @@ main {
   border-radius: 0;
 }
 .section-miPerfil .main-perfil--data-user {
+  margin-top: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 10%;
 }
-.section-miPerfil .main-perfil--data-user figure {
-  width: 50%;
+@media (max-width: 1045px) {
+  .section-miPerfil .main-perfil--data-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.section-miPerfil .main-perfil--data-user figure.perfil--data {
+  width: 40%;
   height: auto;
   border-radius: 0;
   background-color: red;
+  min-width: 450px;
 }
-.section-miPerfil .main-perfil--data-user figure .image {
-  width: 200px;
-  height: 200px;
+@media (max-width: 540px) {
+  .section-miPerfil .main-perfil--data-user figure.perfil--data {
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.section-miPerfil .main-perfil--data-user figure.perfil--data .image {
+  width: 180px;
+  height: 180px;
   border-radius: 0;
 }
-.section-miPerfil .main-perfil--data-user figure .icon {
+.section-miPerfil .main-perfil--data-user figure.perfil--data .icon {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 0;
@@ -490,25 +516,59 @@ main {
 .section-miPerfil .main-perfil--data-user .data-user--academia .editar {
   align-self: flex-end;
 }
-.section-miPerfil .main-perfil--data-user {
+.section-miPerfil .main-perfil--data-alumno {
   width: 100%;
   height: auto;
   border-radius: 0;
 }
-.section-miPerfil .main-perfil--data-user h4 {
+.section-miPerfil .main-perfil--data-alumno h4 {
   font-size: 3rem;
   font-weight: bold;
   line-height: 3.5rem;
   color: #000000;
+  padding: 0 140px;
 }
-.section-miPerfil .main-perfil--data-user h4 ul {
+@media (max-width: 1045px) {
+  .section-miPerfil .main-perfil--data-alumno h4 {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .section-miPerfil .main-perfil--data-alumno h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    color: #000000;
+    padding: 0;
+  }
+}
+.section-miPerfil .main-perfil--data-alumno ul {
   width: 100%;
-  height: auto;
-  border-radius: 0;
+  max-height: 120px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  overflow-x: auto;
+}
+.section-miPerfil .main-perfil--data-alumno ul ul::-webkit-scrollbar {
+  width: 0;
+}
+.section-miPerfil .main-perfil--data-alumno ul li {
+  width: auto;
+  margin: 0 15px;
+}
+@media (max-width: 768px) {
+  .section-miPerfil .main-perfil--data-alumno ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: #000000;
+  }
 }
 
 .section-list-services figure {
@@ -647,7 +707,8 @@ main {
 }
 @media (max-width: 540px) {
   .section-images {
-    display: none;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 1fr;
   }
 }
 .section-images img {
@@ -696,6 +757,7 @@ main {
   align-items: start;
   margin: 0 auto;
   padding: 0 20px;
+  overflow-y: scroll;
 }
 .card-plan ul li p, .card-plan ul li h5 {
   margin: 0;
@@ -811,7 +873,6 @@ main {
 }
 .nav .nav-menu {
   width: 60%;
-  min-width: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -837,13 +898,15 @@ main {
     transition: 0.2s all;
     overflow-y: auto;
   }
+  .nav .nav-menu .nav-menu-item {
+    margin: 0 auto;
+  }
 }
 .nav .nav-menu .nav-menu-link {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: #000000;
-  text-align: center;
   letter-spacing: 1px;
 }
 @media (max-width: 1045px) {
@@ -874,11 +937,10 @@ main {
 }
 
 .nav-menu-link {
-  padding: 8px 2px;
+  padding: 8px 12px;
   border-radius: 3px;
   transition: 0.2s;
   position: relative;
-  text-align: center;
 }
 .nav-menu-link:hover {
   background-color: #ecc8b1;

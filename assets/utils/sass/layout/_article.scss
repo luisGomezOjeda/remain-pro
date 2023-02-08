@@ -66,6 +66,9 @@
   }
   h4{
    @include font(5rem,bold,4rem,color("black"));
+   @include media-down("sm"){
+     @include font(3rem,bold,4rem,color("black"));
+   }
   }
   p{
     @include font(2.5rem,500,3.5rem,color("black"));

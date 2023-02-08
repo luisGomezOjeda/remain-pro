@@ -18,7 +18,6 @@
 
   .nav-menu{
    width: 60%;
-   min-width: 800px;
    @include flex(row,space-evenly,center);
    margin-right: 10px;
    @include media-down("xl"){
@@ -33,10 +32,13 @@
       background:color("fur");
       transition:0.2s all;
       overflow-y:auto;
+
+      .nav-menu-item{
+        margin: 0 auto;
+       }
     }
     .nav-menu-link{
       @include font(1.8rem,500,1.8rem,color("black"));
-      text-align: center;
       letter-spacing: 1px;
       @include media-down("xl"){
         @include font(2.6rem,500,3rem,color("black"));
@@ -59,11 +61,10 @@
   }
  
  .nav-menu-link{
-  padding: 8px 2px;
+  padding: 8px 12px;
   border-radius: 3px;
   transition:0.2s;
   position:relative;
-  text-align: center;
   
   &:hover{
    background-color: color("furWhile");
