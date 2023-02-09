@@ -16,7 +16,8 @@
  
  ul{
    position: absolute;
-   bottom: -349px;
+   
+   bottom: -398px;
    margin-top: 100%;
    @include size(100%,0,0);
    @include flex(column,end,center);
@@ -49,11 +50,12 @@
   .links-service{
     visibility: hidden;
     @include size(95%,auto,0);
+    min-height: 50px;
     background-color: color("fur");
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 6px;
     a{
-    @include font(1.9rem,500,2.5rem,color("black"));
+    @include font(1.9rem,500,2rem,color("black"));
    }
   }
  }  
@@ -104,9 +106,6 @@
   background-position: 0 0%;
   object-fit: cover;
   transition: 0.2s;
-  @include media-down("xl"){
-    // object-fit: contain;
-  }
  }
 }
 
@@ -135,7 +134,6 @@
     @include flex(column,space-evenly,start);
     margin: 0 auto;
     padding: 0 20px;
-    overflow-y: scroll;
     li{
       p ,h5{
         margin: 0;
