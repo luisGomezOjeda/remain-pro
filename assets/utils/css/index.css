@@ -47,6 +47,10 @@ main {
   width: 100%;
   height: auto;
   border-radius: 0;
+  background-image: url("../../images/bckground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .article-info {
@@ -89,57 +93,71 @@ main {
     height: 0;
   }
 }
+.article-info .title .title-decoration {
+  width: 83%;
+  height: auto;
+  border-radius: 0;
+  margin-left: auto;
+  padding-left: 10%;
+  background-color: #c5a691;
+}
+@media (max-width: 1045px) {
+  .article-info .title .title-decoration {
+    width: 75%;
+    height: auto;
+    border-radius: 0;
+    padding-left: 25%;
+  }
+}
+@media (max-width: 540px) {
+  .article-info .title .title-decoration {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+.article-info .title .title-decoration::before {
+  content: "";
+  width: 83%;
+  padding-left: 10%;
+  position: absolute;
+  bottom: 15px;
+  background-color: #c5a691;
+  height: 10px;
+  right: 0;
+}
+@media (max-width: 540px) {
+  .article-info .title .title-decoration::before {
+    width: 100%;
+    height: 7px;
+    padding-left: 0;
+    bottom: 5px;
+  }
+}
 .article-info .title h3 {
-  position: relative;
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 4rem;
   color: #000000;
-  width: 100%;
-  height: 30%;
-  border-radius: 0;
-  text-align: center;
-  background-color: #c5a691;
-  margin-bottom: 15px solid #c5a691;
+  text-align: start;
 }
-@media (max-width: 1045px) {
+@media (max-width: 768px) {
   .article-info .title h3 {
     text-align: center;
   }
 }
 @media (max-width: 540px) {
   .article-info .title h3 {
-    text-align: center;
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 4rem;
     color: #000000;
   }
 }
-.article-info .title h3::after {
-  content: "";
-  position: absolute;
-  left: -8px;
-  background-color: #c5a691;
-  height: 100%;
-  width: 10px;
-}
-@media (max-width: 540px) {
-  .article-info .title h3::after {
-    display: none;
-  }
-}
-.article-info .title h3::before {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  background-color: #c5a691;
-  height: 10px;
-  width: 100%;
-  left: 0;
-}
 .article-info h4 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   line-height: 4rem;
   color: #000000;
@@ -153,11 +171,11 @@ main {
   }
 }
 .article-info p {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  line-height: 3.5rem;
+  line-height: 1.8rem;
   color: #000000;
-  padding: 20px 150px;
+  padding: 0 250px;
 }
 @media (max-width: 1045px) {
   .article-info p {
@@ -171,7 +189,6 @@ main {
     font-weight: 500;
     line-height: 2.5rem;
     color: #000000;
-    text-align: center;
   }
 }
 @media (max-width: 540px) {
@@ -327,7 +344,7 @@ main {
   width: 100%;
   height: auto;
   border-radius: 0;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 @media (max-width: 1045px) {
   .section-institucional {
@@ -342,21 +359,13 @@ main {
 
 .section-academias {
   width: 100%;
+  max-height: 1450px;
   height: auto;
   display: grid;
   grid-template-rows: 0.5fr 1fr 1.5fr;
 }
-@media (max-width: 768px) {
-  .section-academias {
-    grid-template-rows: 1fr 0.5fr 1fr;
-  }
-}
-@media (max-width: 768px) {
-  .section-academias {
-    grid-template-rows: 1fr 1fr 0.5fr;
-  }
-}
 .section-academias .section-data {
+  max-height: 320px;
   padding-bottom: 20px;
 }
 .section-academias .section-serch {
@@ -417,6 +426,10 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.section-registrar-article .article-info {
+  margin-top: 50px;
 }
 
 .section-register {
@@ -592,7 +605,7 @@ main {
 }
 .section-list-services figure ul {
   position: absolute;
-  bottom: -398px;
+  bottom: -250px;
   margin-top: 100%;
   width: 100%;
   height: 0;
@@ -603,11 +616,6 @@ main {
   align-items: center;
   transition: 0.2s;
   z-index: 3;
-}
-@media (max-width: 540px) {
-  .section-list-services figure ul {
-    bottom: -310px;
-  }
 }
 .section-list-services figure ul:hover {
   width: 100%;
@@ -642,15 +650,15 @@ main {
   width: 95%;
   height: auto;
   border-radius: 0;
-  min-height: 50px;
+  min-height: 20px;
   background-color: #c5a691;
   text-align: center;
   padding: 10px 6px;
 }
 .section-list-services figure ul .links-service a {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: #000000;
 }
 .section-list-services figure img {
@@ -675,6 +683,10 @@ main {
   line-height: 1.4rem;
   color: #000000;
   padding: 6px 0;
+  padding: 6px 0;
+}
+.section-list-services figure:nth-child(4) ul h4:hover {
+  padding: 0;
 }
 @media (max-width: 540px) {
   .section-list-services figure:nth-child(4) ul h4 {
@@ -721,7 +733,7 @@ main {
   width: 250px;
   height: 250px;
   border-radius: 0;
-  min-width: 320px;
+  min-width: 300px;
   margin-top: 10%;
   position: relative;
 }

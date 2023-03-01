@@ -1,6 +1,7 @@
 .section-registrar{  
   @include size(100%,auto,0);
   padding-top: 80px;
+
   .section-registrar--form{
     @include size(90%,100%,0);
     display: grid;
@@ -25,13 +26,13 @@
   }
 }
 
-.section-planes{
-  width: 100%;
-  @include flex(row,center,center);
-  flex-wrap: wrap;
-  // display: flex;
-//   height: auto;
-//   overflow-x: scroll;
-//   overscroll-behavior-x: contain;
-//   scroll-snap-type: x proximity;
+  .section-planes{
+    width: 100%;
+    @include flex(row,center,center);
+    flex-wrap: wrap;
+  
+}
+
+.section-registrar-article .article-info{
+  margin-top:50px;
 }
