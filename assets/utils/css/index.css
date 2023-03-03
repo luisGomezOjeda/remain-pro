@@ -380,10 +380,24 @@ main {
 }
 
 .section-registrar {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 0;
+  padding: 40px 0;
+  margin: 0 5%;
+  margin-bottom: 10%;
+  background-image: url("../../images/background-papiro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 80px;
+}
+@media (max-width: 768px) {
+  .section-registrar {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 .section-registrar .section-registrar--form {
   width: 90%;
@@ -433,9 +447,22 @@ main {
 }
 
 .section-register {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 0;
+  margin: 0 5%;
+  margin-top: 15%;
+  background-image: url("../../images/background-papiro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .section-register {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 .section-register .section-register--form .register-form-grid {
   width: 90%;
@@ -588,19 +615,37 @@ main {
   margin: 0;
   position: relative;
 }
+.section-list-services figure:nth-child(1) ul h4 {
+  border-radius: 0 0 0 10px;
+}
+.section-list-services figure:nth-child(8) ul h4 {
+  border-radius: 0 0 10px 0;
+}
 @media (max-width: 1207px) {
   .section-list-services figure {
     min-width: 20%;
+  }
+  .section-list-services figure:nth-child(1) ul h4 {
+    border-radius: 0;
+  }
+  .section-list-services figure:nth-child(6) ul h4 {
+    border-radius: 0 0 0 10px;
   }
 }
 @media (max-width: 768px) {
   .section-list-services figure {
     min-width: 33%;
   }
+  .section-list-services figure:nth-child(6) ul h4 {
+    border-radius: 0;
+  }
 }
 @media (max-width: 540px) {
   .section-list-services figure {
     min-width: 50%;
+  }
+  .section-list-services figure:nth-child(8) ul h4 {
+    border-radius: 0;
   }
 }
 .section-list-services figure ul {
@@ -660,6 +705,9 @@ main {
   font-weight: 500;
   line-height: 1.8rem;
   color: #000000;
+}
+.section-list-services figure ul .links-service:nth-child(6) {
+  border-radius: 0 0 10px 10px;
 }
 .section-list-services figure img {
   width: 100%;
@@ -796,7 +844,7 @@ main {
   font-weight: 500;
   line-height: 3.5rem;
   color: #000000;
-  background-color: #ecc8b1;
+  background-color: #fff;
 }
 @media (max-width: 540px) {
   .item input {

@@ -1,5 +1,19 @@
 .section-registrar{  
-  @include size(100%,auto,0);
+  @include size(90%,auto,0);
+  padding: 40px 0;
+  margin:0 5%;
+  margin-bottom: 10%;
+
+  @include media-down("md"){
+    @include size(100%,auto,0);
+    margin: 0;
+  }
+
+  background: {
+    image : url("../../images/background-papiro.jpg");
+    repeat: no-repeat;
+    size:cover;
+  }
   padding-top: 80px;
 
   .section-registrar--form{

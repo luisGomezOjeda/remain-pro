@@ -4,13 +4,24 @@
   margin: 0;
   position: relative;
   
+
+  &:nth-child(1){& ul h4{border-radius:0 0 0 10px}}
+  
+  &:nth-child(8){& ul h4{border-radius:0 0 10px 0 ;}}
+
+
+
   @include media(1207px){
     min-width: 20%;
-   }
-   @include media-down("md"){
-     min-width: 33%;
+    &:nth-child(1){& ul h4{border-radius:0}}
+    &:nth-child(6){& ul h4{border-radius:0 0 0 10px}}
+  }
+  @include media-down("md"){
+    min-width: 33%;
+    &:nth-child(6){& ul h4{border-radius:0}}
   }
   @include media-down("sm"){
+    &:nth-child(8){& ul h4{border-radius:0}}
     min-width: 50%;
   }
   
@@ -23,7 +34,7 @@
     @include flex(column,end,center);
     transition: 0.2s;
     z-index: 3;
-    
+
      
      &:hover{
        @include size(100%,auto,0);
@@ -31,7 +42,6 @@
          visibility: visible;
        }
      }
- 
      
      & h4{
    background-color: color("fur");
@@ -39,7 +49,8 @@
      @include font(1.6rem,bold,4rem,color("black"));
      text-align: center;
      margin: 0;
-     
+
+
      @include media-down("sm"){
        @include font(2rem,bold,4rem,color("black"));
      }
@@ -51,10 +62,14 @@
      background-color: color("fur");
      text-align: center;
      padding: 10px 6px;
+
      a{
-     @include font(1.4rem,500,1.8rem,color("black"));
+       @include font(1.4rem,500,1.8rem,color("black"));
+      }
     }
-   }
+    .links-service:nth-child(6){
+      border-radius: 0 0 10px 10px;
+    }
   }  
  
   img{
