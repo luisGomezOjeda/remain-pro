@@ -1,5 +1,6 @@
 .article-info{
  @include flex(column,start,center);
+ margin-top: 30px;
   .title{
     position: relative;
    @include size(100%,20%,100%);

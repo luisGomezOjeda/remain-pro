@@ -141,17 +141,21 @@
      @include font(2.5rem,bold,8rem,color("fur"));
      width: 100%;
      letter-spacing: 2px;
-     border-radius: 30px;
+     border-radius: 40px;
      text-align: center;
      background: color("black");
+     border: solid 4px color("furwhile");
+     box-shadow: inset -15px -15px 28px #3e3e3e,inset 15px 15px 28px #333333;
      position: absolute;
-     top: -85px;
-     left: 4px;
+     top: -90px;
+     left: 1.5px;
    }
    ul{
      background-color:color("furWhile");
+     box-shadow: inset -30px -30px 100px #7a675a,inset 30px 30px 100px #ffe5c8;
      @include size(90%,200px,0);
      @include flex(column,space-evenly,start);
+     border-radius:20px;
      margin: 0 auto;
      padding: 0 20px;
      li{
