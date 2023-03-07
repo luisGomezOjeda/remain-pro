@@ -17,7 +17,7 @@
   }
 
   .nav-menu{
-   width: 60%;
+   width: 65%;
    @include flex(row,space-evenly,center);
    margin-right: 10px;
    @include media-down("xl"){
@@ -39,7 +39,6 @@
     }
     .nav-menu-link{
       @include font(1.8rem,500,1.8rem,color("black"));
-      letter-spacing: 1px;
       @include media-down("xl"){
         @include font(2.6rem,500,3rem,color("black"));
       }

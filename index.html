@@ -11,17 +11,20 @@
 <body>
  <header class="header">
   <nav class="nav">
-    <a href="./index.html" class="logo nav-link"><img src="./assets/images/logo.png" alt=""></a>
+    <a href="#section-list-services" class="logo nav-link"><img src="./assets/images/logo.png" alt=""></a>
     <ul class="nav-menu">
-     <li class="nav-menu-item"><a href="./index.html" class="nav-link nav-menu-link">Inicio</a>
+     <li class="nav-menu-item"><a href="#section-list-services" class="nav-link nav-menu-link">Inicio</a>
     </li>
-    <li class="nav-menu-item a"><a href="./academias.html" class="nav-link nav-menu-link">Academias</a>
+    <li class="nav-menu-item a"><a href="#section-academias" class="nav-link nav-menu-link">Academias</a>
     </li>
-    <li class="nav-menu-item"><a href="./profecionales.html" class="nav-link nav-menu-link">Profesionales</a></li>
-    <li class="nav-menu-item"><a href="./matricularme.html" class="main-secundary nav-link nav-menu-link">Matricularme</a>
+    <li class="nav-menu-item"><a href="#section-servicios" class="nav-link nav-menu-link">Profesionales</a></li>
+    
+    <li class="nav-menu-item"><a href="#section-registrar-academia" class="nav-link nav-menu-link">Registrar Academia</a>
     </li>
-    <li class="nav-menu-item"><a href="./registrar_academia.html" class="nav-link nav-menu-link">Registrar Academia</a>
+
+      <li class="nav-menu-item"><a href="#section-matricularme" class="main-secundary nav-link nav-menu-link">Matricularme</a>
     </li>
+
     <li class="nav-menu-item"><a href="./perfil.html" class="nav-link nav-menu-link">perfil</a>
     </li>
 </ul>
@@ -31,7 +34,7 @@
 </nav>
 </header>
 <main>
-  <section class="section-list-services">
+  <section id ="section-list-services" class="section-list-services">
     <figure>
       <img src="./assets/images/remainpro-1-724x1024.jpg" alt="" class="ilutration-service">
       <ul>
@@ -121,7 +124,7 @@
      </ul>
     </figure>
    </section>
-   <section class="section-institucional" id = "main-secundary">
+   <section class="section-institucional" id = "section-institucional">
     <section class="section-presentation-article">
       <article class="article-info">
         <div class="title">
@@ -144,7 +147,7 @@
      </article>
     </section>
    </section>
-   <section class ="section-academias">
+   <section class ="section-academias" id="section-academias">
     <section class="section-images">
      <img src="./assets/images/1.png" alt="" class="ilutration-service">
      <img src="./assets/images/remainpro-2-724x1024.jpg" alt="" class="ilutration-service">
@@ -171,7 +174,7 @@
        </section>
      </section>
        <section class="section-serch">
-         <form class="section-serch-form">
+         <form class="section-serch-form" id="section-academias">
        <input type="text" placeholder="Buscar Academia registrada">
        <input type="text" placeholder="seleccionar pais">
        <input type="text" placeholder="seleccionar ciudad">
@@ -188,7 +191,7 @@
      <img src="./assets/images/remainpro-7-724x1024.jpg" alt="" class="ilutration-service">
      <img src="./assets/images/remainpro-8-724x1024.jpg" alt="" class="ilutration-service">
     </section>
-    <section class="section-data">
+    <section class="section-data" id="section-servicios">
       <section class="section-data-article">
         <article class="article-info">
          <div class="title">
@@ -215,7 +218,7 @@
      </form>
    </section>
    </section>
-   <section class="section-registrar-academia">
+   <section class="section-registrar-academia" id="section-registrar-academia">
 
     <section class="section-list-services">
       <figure>
@@ -308,7 +311,7 @@
       </figure>
      </section>
 
-    <section class="section-registrar-article">
+    <section class="section-registrar-article" id="section-registrar-academia">
       <article class="article-info">
         <div class="title">
           <img src="./assets/images/logo.png" alt="">
@@ -467,7 +470,7 @@
   </section>
    <section class="section-register">
 
-    <form action="" class="section-register--form">
+    <form action="" class="section-register--form" id = "section-matricularme">
      <div class="register-form-div">
        <input type="submit" class="register-form-div--input" id="registrarme" value="registrarme">
      </div>
@@ -507,11 +510,7 @@
            <option value="3">nivel master</option>
          </select>
        </div>
-       
-         <div class="item">
-        <label for="direccion">dirección</label>
-        <input type="text" id="direccion">
-       </div>
+
    
        <div class="item">
          <label for="direccion">dirección</label>

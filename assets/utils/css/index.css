@@ -17,6 +17,7 @@ ul {
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
@@ -934,7 +935,7 @@ main {
   object-fit: contain;
 }
 .nav .nav-menu {
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -969,7 +970,6 @@ main {
   font-weight: 500;
   line-height: 1.8rem;
   color: #000000;
-  letter-spacing: 1px;
 }
 @media (max-width: 1045px) {
   .nav .nav-menu .nav-menu-link {
