@@ -361,25 +361,38 @@ main {
 
 .section-academias {
   width: 100%;
-  max-height: 1450px;
   height: auto;
   display: grid;
-  grid-template-rows: 0.5fr 1fr 1.5fr;
+  grid-template-rows: 0.5fr 0.5fr 1.5fr;
+  max-height: 1900px;
+  margin-bottom: 80px;
 }
 .section-academias .section-data {
-  margin-top: 50px;
   max-height: 320px;
   padding-bottom: 20px;
 }
 .section-academias .section-serch {
   width: 100%;
   height: auto;
-  background-image: url("../../images/mapa.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   display: flex;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-academias .section-serch .section-serch-form input {
+  margin: 5px 0;
+}
+
+.section-map {
+  display: grid;
+  place-items: center;
+}
+.section-map img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .section-registrar {
