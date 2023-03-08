@@ -455,6 +455,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .section-registrar-article .article-info {
@@ -633,8 +634,14 @@ main {
 .section-list-services figure:nth-child(1) ul h4 {
   border-radius: 0 0 0 10px;
 }
+.section-list-services figure:nth-child(1) ul h4:hover {
+  border-radius: 0;
+}
 .section-list-services figure:nth-child(8) ul h4 {
   border-radius: 0 0 10px 0;
+}
+.section-list-services figure:nth-child(8) ul h4:hover {
+  border-radius: 0;
 }
 @media (max-width: 1207px) {
   .section-list-services figure {
@@ -665,6 +672,7 @@ main {
 }
 .section-list-services figure ul {
   position: absolute;
+  cursor: pointer;
   bottom: -250px;
   margin-top: 100%;
   width: 100%;
