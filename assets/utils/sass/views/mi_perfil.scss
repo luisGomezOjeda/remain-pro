@@ -19,6 +19,7 @@
    }
    .icon{
     @include size(1.8rem,1.8rem,0);
+    cursor:pointer;
    }
   }
   .data-user,.data-user--academia{
@@ -34,7 +35,15 @@
    }
    .editar{
     align-self: flex-end;
-   }
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    img{
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
+  }
   }
  }
  .main-perfil--data-alumno{

@@ -16,6 +16,10 @@ ul {
   padding: 0;
 }
 
+input {
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -544,6 +548,7 @@ main {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 0;
+  cursor: pointer;
 }
 .section-miPerfil .main-perfil--data-user .data-user, .section-miPerfil .main-perfil--data-user .data-user--academia {
   display: flex;
@@ -570,6 +575,14 @@ main {
 }
 .section-miPerfil .main-perfil--data-user .data-user--academia .editar {
   align-self: flex-end;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.section-miPerfil .main-perfil--data-user .data-user--academia .editar img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
 .section-miPerfil .main-perfil--data-alumno {
   width: 100%;
